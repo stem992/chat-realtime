@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const sendButton = document.getElementById('send-button');
 
     sendButton.addEventListener('click', () => {
-        const messageText = messageInput.value.trim(); // rimozione spazi
+        const messageText = messageInput.value.trim().toLowerCase(); // rimozione spazi
 
         if (messageText !== '') {
             const messageElement = document.createElement('div');

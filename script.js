@@ -15,20 +15,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 const responseElement = document.createElement('div');
-                responseElement.classList.add('message', 'received'); 
-                if(messageText == 'ciao'){
-                    responseElement.textContent = 'ciao a te!';
-
-                } else if(messageText == 'come ti chiami?'){
-                    responseElement.textContent = 'stefano';
-                    
-                }  else {
-                    responseElement.textContent = 'ricevuto!';
+                responseElement.classList.add('message', 'received');
+                let responseText = '';
+            
+                switch (messageText) {
+                    case 'ciao':
+                        responseText = 'Ciao a te!';
+                        break;
+                    case 'come ti chiami?':
+                        responseText = 'Il mio nome è Stefano.';
+                        break;
+                    case 'cosa fai oggi?':
+                        responseText = 'Niente di particolare, e tu?';
+                        break;
+                    case 'che tempo fa?':
+                        responseText = 'Non lo so, sono solo un programma.';
+                        break;
+                    case 'mi piace chattare con te':
+                        responseText = 'Anche a me piace chattare con te';
+                        break;
+                    default:
+                        responseText = 'Non capisco.';
                 }
-               
-                chatMessages.appendChild(responseElement); 
-                chatMessages.scrollTop = chatMessages.scrollHeight; 
-            }, 1000); 
+            
+                responseElement.textContent = responseText;
+                chatMessages.appendChild(responseElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }, 1000);
+            
 
 
             messageInput.value = '';

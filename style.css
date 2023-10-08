@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 30px;
+    background: linear-gradient(145deg, #bce5ff 0, #9db9f2 50%, #7e8fb3 100%);
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-header {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: right;
+    text-transform: uppercase;
+    font-family: fantasy;
+    letter-spacing: 2px;
+}
+
+.chat-messages {
+    border: 5px solid #5c5656;
+    background-color: #f9f9f9;
+    height: 250px;
+    overflow-y: scroll;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.chat-input {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    margin-right: 10px;
+    font-size: 16px;
+    outline: none;
+    background: transparent; 
+    border-bottom: 2px solid #5c5656; 
+}
+
+.button-38 {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-38:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+
+.message {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    clear: both;
+}
+
+.message.sent {
+    background-color: #007bff;
+    float: right;
+    border-radius: 10px 20px;
+    font-size: 12px;
+}
+
+.message.received {
+    background-color: #ccc;
+    float: left;
+    border-radius: 10px 20px;
+    font-size: 12px;
+}
+
